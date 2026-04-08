@@ -1,0 +1,24 @@
+/* 
+  Mudan Partner - Main Styles
+*/
+
+/* Smooth scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: 'Manrope', sans-serif; 
+    background-color: #F7FAFC; /* surface color */
+    overflow-x: hidden;
+}
+
+/* Material Icons configuration */
+.material-symbols-outlined { 
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; 
+}
+
+/* Custom gradient used across buttons and elements */
+.kinetic-gradient { 
+    background: linear-gradient(135deg, #F6AD55 0%, #ED8936 100%); 
+}

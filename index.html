@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mudan Partner | Movemos tu hogar con seguridad y confianza</title>
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Main JS (Tailwind Config & Logic) -->
+    <script src="./assets/js/main.js"></script>
+</head>
+
+<body class="text-on-surface selection:bg-secondary selection:text-white">
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <img src="./assets/resources/logo letras.png" alt="Mudan Partner" class="h-12 md:h-14 w-auto object-contain">
+            </div>
+            <div class="hidden lg:flex gap-8 font-semibold tracking-tight items-center">
+                <a class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors"
+                    href="#">Inicio</a>
+                <a class="text-primary hover:text-secondary transition-colors" href="#why">¿Por qué?</a>
+                <a class="text-primary hover:text-secondary transition-colors" href="#services">Servicios</a>
+                <a class="text-primary hover:text-secondary transition-colors" href="#process">Proceso</a>
+                <a class="text-primary hover:text-secondary transition-colors" href="#contact">Contacto</a>
+                <a href="https://wa.me/573004295774?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza" target="_blank"
+                    class="kinetic-gradient text-white px-6 py-2.5 rounded-lg font-bold hover:scale-[1.02] shadow-md transition-transform active:scale-95">
+                    Cotiza Gratis
+                </a>
+            </div>
+            <button id="menu-btn" class="lg:hidden text-primary p-1 bg-surface rounded-md">
+                <span id="menu-icon" class="material-symbols-outlined text-3xl block">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-3xl border-t border-surface-container-low absolute w-full left-0 shadow-2xl px-6 py-6 flex-col gap-5 font-semibold text-lg text-center transform origin-top transition-all">
+            <a class="text-secondary block" href="#">Inicio</a>
+            <a class="text-primary block" href="#why">¿Por qué?</a>
+            <a class="text-primary block" href="#services">Servicios</a>
+            <a class="text-primary block" href="#process">Proceso</a>
+            <a class="text-primary block" href="#contact">Contacto</a>
+            <div class="w-full h-px bg-surface-container-low my-1"></div>
+            <a href="https://wa.me/573004295774?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza" target="_blank"
+                class="kinetic-gradient text-white w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md">
+                Cotiza Gratis
+                <span class="material-symbols-outlined text-xl">trending_flat</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-primary" id="home">
+        <div class="absolute inset-0 opacity-20">
+            <img class="w-full h-full object-cover" alt="Fondo camión" src="./assets/resources/mudanza1.jpeg" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/50"></div>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center h-full pt-10">
+            <div data-aos="fade-right" class="z-10 relative">
+                <!-- Integrated Big Logo -->
+                <div class="inline-flex items-center justify-center p-3 sm:p-5 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 mb-8 hover:bg-white/20 transition-colors duration-300 group">
+                    <div class="bg-white rounded-xl overflow-hidden p-1 group-hover:scale-105 transition-transform duration-500">
+                        <img src="./assets/resources/logo big.jpeg" alt="Mudan Partner Grande" class="h-16 sm:h-20 md:h-24 w-auto object-contain mix-blend-multiply">
+                    </div>
+                </div>
+
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-white leading-tight tracking-tighter">
+                    Tu mudanza <span class="text-secondary">fácil, segura</span> y sin estrés.
+                </h1>
+                <p class="text-lg lg:text-xl text-surface-container-low max-w-lg leading-relaxed">
+                    Ofrecemos servicios de mudanza en Bogotá con personal capacitado y camiones equipados, cuidando cada
+                    detalle para que tu traslado sea rápido y sin preocupaciones.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/573004295774?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza"
+                        target="_blank"
+                        class="kinetic-gradient text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        Cotiza Gratis - Respuesta Inmediata
+                        <span class="material-symbols-outlined">trending_flat</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block relative pl-10" data-aos="zoom-in" data-aos-duration="1200"
+                data-aos-delay="200">
+                <div
+                    class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img class="w-full h-[500px] object-cover" alt="Camion Mudan Partner"
+                        src="./assets/resources/mudanza2.jpeg" />
+                </div>
+                <div
+                    class="absolute top-10 -left-6 z-20 w-32 h-32 bg-white rounded-full flex flex-col items-center justify-center text-primary font-bold text-center leading-tight shadow-2xl animate-bounce">
+                    <span class="material-symbols-outlined text-secondary text-3xl mb-1">verified_user</span>
+                    <span class="text-sm">100%<br />Seguro</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Mudan Partner (Icon Grid) -->
+    <section class="py-24 bg-surface" id="why">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4" data-aos="fade-up">
+                <div class="max-w-2xl">
+                    <span class="text-secondary font-bold uppercase tracking-widest text-sm mb-4 block">Excelencia
+                        Logística</span>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">¿Por qué elegir Mudan Partner?</h2>
+                </div>
+                <p class="text-on-surface-variant font-medium text-lg">Elevamos el estándar de las mudanzas en Colombia.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary text-3xl">engineering</span>
+                    </div>
+                    <h3 class="font-bold text-primary mb-3 text-lg">Personal Capacitado</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Expertos en manejo de objetos delicados y
+                        mobiliario complejo.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary text-3xl">inventory_2</span>
+                    </div>
+                    <h3 class="font-bold text-primary mb-3 text-lg">Cuidado Garantizado</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Utilizamos materiales de primera para
+                        proteger cada una de tus pertenencias.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary text-3xl">schedule</span>
+                    </div>
+                    <h3 class="font-bold text-primary mb-3 text-lg">Puntualidad</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Respetamos tu tiempo. Cumplimos con los
+                        horarios pactados estrictamente.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-md border-b-4 border-secondary hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary text-3xl">forum</span>
+                    </div>
+                    <h3 class="font-bold text-primary mb-3 text-lg">Atención WhatsApp</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Soporte directo y cotizaciones rápidas a
+                        un clic de distancia.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-secondary text-3xl">payments</span>
+                    </div>
+                    <h3 class="font-bold text-primary mb-3 text-lg">Precios Claros</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">Sin costos ocultos ni sorpresas de último
+                        minuto. Transparencia total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-surface-container" id="services">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-primary mb-12 tracking-tight text-center" data-aos="fade-down">
+                Nuestros Servicios</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img class="w-full h-48 object-cover" alt="Mudanzas Residenciales" src="./assets/resources/mudanza3.jpeg" />
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-secondary text-2xl">house</span>
+                            <h3 class="text-xl font-bold text-primary">Mudanzas Residenciales</h3>
+                        </div>
+                        <p class="text-on-surface-variant">Traslados de hogares con el máximo cuidado y respeto que tus
+                            recuerdos merecen.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img class="w-full h-48 object-cover" alt="Mudanzas Empresariales"
+                        src="./assets/resources/embalaje1.jpeg" />
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-secondary text-2xl">business</span>
+                            <h3 class="text-xl font-bold text-primary">Mudanzas Empresariales</h3>
+                        </div>
+                        <p class="text-on-surface-variant">Logística eficiente para oficinas y negocios minimizando
+                            pausas operativas.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img class="w-full h-48 object-cover" alt="Embalaje Profesional" src="./assets/resources/embalaje2.jpeg" />
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-secondary text-2xl">inventory_2</span>
+                            <h3 class="text-xl font-bold text-primary">Embalaje Profesional</h3>
+                        </div>
+                        <p class="text-on-surface-variant">Empacamos tus objetos más valiosos. Cristaleria, arte, y más.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                <!-- Service 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-container-low flex items-center gap-4 hover:border-secondary transition-colors"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <span class="material-symbols-outlined text-secondary text-3xl">local_shipping</span>
+                    <div>
+                        <h4 class="font-bold text-primary">Transporte Especializado</h4>
+                        <p class="text-xs text-on-surface-variant mt-1">Muebles y objetos grandes.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-container-low flex items-center gap-4 hover:border-secondary transition-colors"
+                    data-aos="fade-up" data-aos-delay="450">
+                    <span class="material-symbols-outlined text-secondary text-3xl">handyman</span>
+                    <div>
+                        <h4 class="font-bold text-primary">Desarme y Armado</h4>
+                        <p class="text-xs text-on-surface-variant mt-1">Manipulación experta de muebles.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-container-low flex items-center gap-4 hover:border-secondary transition-colors"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <span class="material-symbols-outlined text-secondary text-3xl">all_inclusive</span>
+                    <div>
+                        <h4 class="font-bold text-primary">Servicio Integral</h4>
+                        <p class="text-xs text-on-surface-variant mt-1">Empacar, transportar y organizar.</p>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-container-low flex items-center gap-4 hover:border-secondary transition-colors"
+                    data-aos="fade-up" data-aos-delay="550">
+                    <span class="material-symbols-outlined text-secondary text-3xl">warehouse</span>
+                    <div>
+                        <h4 class="font-bold text-primary">Bodegaje</h4>
+                        <p class="text-xs text-on-surface-variant mt-1">Espacio seguro para pertenencias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 bg-primary text-white relative" id="process">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-extrabold mb-16 tracking-tight text-center" data-aos="zoom-y-out">El Proceso Mudan
+                Partner</h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-0 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-[2.5rem] left-[10%] right-[10%] h-0.5 bg-white/20"></div>
+
+                <!-- Steps -->
+                <div class="relative text-center group" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-20 h-20 bg-secondary text-white rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg group-hover:scale-110 transition-transform">
+                        01</div>
+                    <h3 class="font-bold text-xl mb-3">Cotización</h3>
+                    <p class="text-sm text-surface max-w-[200px] mx-auto leading-relaxed">Te damos un precio justo sin
+                        compromiso.</p>
+                </div>
+                <div class="relative text-center group" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-20 h-20 bg-surface text-primary rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+                        02</div>
+                    <h3 class="font-bold text-xl mb-3">Planeación</h3>
+                    <p class="text-sm text-surface max-w-[200px] mx-auto leading-relaxed">Coordinamos fecha y hora según
+                        tu necesidad.</p>
+                </div>
+                <div class="relative text-center group" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 bg-surface text-primary rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+                        03</div>
+                    <h3 class="font-bold text-xl mb-3">Embalaje y Carga</h3>
+                    <p class="text-sm text-surface max-w-[200px] mx-auto leading-relaxed">Protegemos y subimos todo con
+                        personal experto.</p>
+                </div>
+                <div class="relative text-center group" data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-20 h-20 bg-surface text-primary rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+                        04</div>
+                    <h3 class="font-bold text-xl mb-3">Traslado Seguro</h3>
+                    <p class="text-sm text-surface max-w-[200px] mx-auto leading-relaxed">Monitoreamos tu mudanza a
+                        nivel nacional.</p>
+                </div>
+                <div class="relative text-center group" data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-20 h-20 bg-surface text-primary rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-6 relative z-10 shadow-lg group-hover:bg-secondary group-hover:text-white transition-colors">
+                        05</div>
+                    <h3 class="font-bold text-xl mb-3">Entrega</h3>
+                    <p class="text-sm text-surface max-w-[200px] mx-auto leading-relaxed">Descargamos y ubicamos todo en
+                        su nuevo lugar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values & Company Profile -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-extrabold text-primary mb-8 tracking-tight">Valores Corporativos</h2>
+                <p class="text-on-surface-variant mb-10 text-lg leading-relaxed">En Mudan Partner, garantizamos un
+                    servicio de excelencia fundamentado en nuestros principios innegociables para brindarte seguridad.
+                </p>
+
+                <div class="space-y-6">
+                    <div
+                        class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-secondary text-3xl">task_alt</span>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Responsabilidad</h4>
+                            <p class="text-sm text-on-surface-variant mt-1">Cumplimiento puntual y organizado en todo
+                                momento.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-secondary text-3xl">shield</span>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Seguridad</h4>
+                            <p class="text-sm text-on-surface-variant mt-1">Protección total de tus pertenencias.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="material-symbols-outlined text-secondary text-3xl">handshake</span>
+                        <div>
+                            <h4 class="font-bold text-primary text-lg">Compromiso & Confianza</h4>
+                            <p class="text-sm text-on-surface-variant mt-1">Calidad total, sin importar el tamaño, con
+                                transparencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="bg-primary aspect-auto md:aspect-square rounded-[2rem] overflow-hidden shadow-2xl relative">
+                    <img class="w-full h-full object-cover" alt="Personal de Mudan Partner"
+                        src="./assets/resources/mudanza3.jpeg" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-10">
+                        <p class="text-white font-bold text-2xl italic mb-2">"Tu aliado en mudanzas y transporte."</p>
+                        <p class="text-surface-container-low">El mejor equipo a tu disposición.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-primary mb-16 tracking-tight text-center" data-aos="fade-down">Lo
+                que dicen nuestros clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex gap-1 mb-6 text-secondary">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-8 leading-relaxed">"Excelente servicio. Muy puntuales y
+                        extremadamente cuidadosos con mis muebles de sala que eran muy delicados. Recomendadísimos."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+                            CM</div>
+                        <div>
+                            <h4 class="font-bold text-primary">Carlos M.</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Mudanza
+                                Residencial</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-10 rounded-3xl shadow-md border-t-4 border-secondary transform hover:-translate-y-1 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex gap-1 mb-6 text-secondary">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-8 leading-relaxed">"Lograron mover toda nuestra oficina
+                        en tiempo récord de manera organizada para que pudiéramos operar el día siguiente. Equipo muy
+                        profesional."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg">
+                            LR</div>
+                        <div>
+                            <h4 class="font-bold text-primary">Laura R.</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Mudanza
+                                Empresarial</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex gap-1 mb-6 text-secondary">
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <p class="text-on-surface-variant italic mb-8 leading-relaxed">"Cotización rápida y transparente por
+                        WhatsApp. No hubo sorpresas, el embalaje fue impecable y el personal muy amable. La mejor
+                        experiencia."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg">
+                            AS</div>
+                        <div>
+                            <h4 class="font-bold text-primary">Andrés S.</h4>
+                            <p class="text-xs text-on-surface-variant uppercase tracking-widest mt-1">Embalaje y
+                                Transporte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="py-24 bg-primary text-white" id="contact">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-extrabold mb-6 tracking-tight text-white">Contáctanos Hoy Mismo</h2>
+                    <p class="text-surface-container-low mb-12 text-lg">
+                        Estamos listos para ayudarte. Escríbenos por WhatsApp para una asesoría inmediata y cotización
+                        sin compromiso.
+                    </p>
+
+                    <div class="space-y-6 mb-12">
+                        <a href="https://wa.me/573004295774?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza"
+                            target="_blank"
+                            class="flex items-center justify-between p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors border border-white/5 group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">chat</span>
+                                </div>
+                                <div>
+                                    <p class="text-surface-container-lowest font-semibold">Habla con un asesor (Línea 1)
+                                    </p>
+                                    <p class="text-2xl font-bold font-manrope text-white">+57 300 4295 774</p>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-white opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                        </a>
+
+                        <a href="https://wa.me/573203021590?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza"
+                            target="_blank"
+                            class="flex items-center justify-between p-6 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors border border-white/5 group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-3xl">chat</span>
+                                </div>
+                                <div>
+                                    <p class="text-surface-container-lowest font-semibold">Habla con logística (Línea 2)
+                                    </p>
+                                    <p class="text-2xl font-bold font-manrope text-white">+57 320 3021 590</p>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-white opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-2xl mb-6 font-manrope">Síguenos en Redes</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://www.instagram.com/mudanpartner26?igsh=YThwM2lhN2xzYWxp" target="_blank"
+                                class="flex flex-col items-center justify-center p-6 bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] rounded-3xl hover:shadow-lg hover:-translate-y-1 transition-all group">
+                                <div
+                                    class="bg-white/20 p-3 rounded-full mb-3 group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white tracking-widest text-sm uppercase">Instagram</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/18F2oN5vp6/?mibextid=wwXIfr" target="_blank"
+                                class="flex flex-col items-center justify-center p-6 bg-[#1877F2] rounded-3xl hover:shadow-lg hover:-translate-y-1 transition-all group">
+                                <div
+                                    class="bg-white/20 p-3 rounded-full mb-3 group-hover:scale-110 transition-transform">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </div>
+                                <span class="font-bold text-white tracking-widest text-sm uppercase">Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="relative h-[600px] w-full rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/10"
+                    data-aos="fade-left">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127252.19830500742!2d-74.19504392942485!3d4.648625902142277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1sen!2sus!4v1714488392134!5m2!1sen!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="grayscale hover:grayscale-0 transition-all duration-700"></iframe>
+
+                    <div
+                        class="absolute bottom-8 left-8 right-8 bg-white text-primary p-6 rounded-2xl shadow-xl flex items-start gap-4">
+                        <span class="material-symbols-outlined text-secondary text-3xl mt-1">location_on</span>
+                        <div>
+                            <h3 class="font-extrabold text-lg mb-1">Cobertura Nacional</h3>
+                            <p class="text-on-surface-variant text-sm">Operamos principalmente en la sabana de Bogotá,
+                                con rutas de traslado a las ciudades principales de Colombia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#000c2d] text-white pt-10 pb-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-surface-container-low text-sm font-medium">
+            <p>© 2026 MudanPartnerCo. Todos los derechos reservados.</p>
+            <p class="mt-2 text-white/50">"Movemos tu hogar con seguridad y confianza."</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/573004295774?text=%C2%A1Hola!%20quiero%20cotizar%20una%20mudanza" target="_blank"
+        class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform active:scale-95 group">
+        <span class="material-symbols-outlined text-4xl mt-1">chat</span>
+        <span
+            class="absolute right-[4.5rem] bg-white text-primary px-4 py-2 rounded-lg font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            ¡Cotiza Inmediato!
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Scripts properly loaded in main.js -->
+</body>
+
+</html>
