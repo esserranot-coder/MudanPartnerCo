@@ -69,4 +69,60 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 4. Team Slider Auto-scroll & Drag
+    const teamSlider = document.getElementById('team-slider');
+    if (teamSlider) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let autoScrollInterval;
+
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                const maxScrollLeft = teamSlider.scrollWidth - teamSlider.clientWidth;
+                // If reached the end (with a small 10px buffer), go back to start
+                if (teamSlider.scrollLeft >= maxScrollLeft - 10) {
+                    teamSlider.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    // Scroll by approximately one card width plus gap (e.g. 320px + 24px)
+                    teamSlider.scrollBy({ left: 344, behavior: 'smooth' });
+                }
+            }, 3000); // 3 seconds per slide
+        };
+
+        const stopAutoScroll = () => clearInterval(autoScrollInterval);
+
+        // Start automatic scrolling initially
+        startAutoScroll();
+
+        // Pause automatic scrolling when interacting or hovering
+        teamSlider.addEventListener('mouseenter', stopAutoScroll);
+        teamSlider.addEventListener('mouseleave', startAutoScroll);
+        teamSlider.addEventListener('touchstart', stopAutoScroll, {passive: true});
+        teamSlider.addEventListener('touchend', startAutoScroll, {passive: true});
+
+        // Mouse manual dragging functionality
+        teamSlider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - teamSlider.offsetLeft;
+            scrollLeft = teamSlider.scrollLeft;
+            teamSlider.classList.remove('snap-x', 'snap-mandatory'); // Smooth drag
+        });
+        teamSlider.addEventListener('mouseleave', () => {
+            isDown = false;
+            teamSlider.classList.add('snap-x', 'snap-mandatory'); // Re-enable snap
+        });
+        teamSlider.addEventListener('mouseup', () => {
+            isDown = false;
+            teamSlider.classList.add('snap-x', 'snap-mandatory'); // Re-enable snap
+        });
+        teamSlider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - teamSlider.offsetLeft;
+            const walk = (x - startX) * 2; // Drag sensitivity
+            teamSlider.scrollLeft = scrollLeft - walk;
+        });
+    }
 });
